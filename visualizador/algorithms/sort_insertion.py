@@ -17,7 +17,7 @@ def step():
     if i >= n:
         return {"done": True}
     if j is None:
-        j = i  # empezamos el desplazamiento
+        j = i 
         return {"a": j, "b": j, "swap": False, "done": False}
     if j > 0 and items[j - 1] > items[j]:
         a = j - 1
