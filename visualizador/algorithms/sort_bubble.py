@@ -30,7 +30,7 @@ def step():
             swapped = True          
             hubo_swap = True
 
-        j += 1
+        j = j + 1
 
         if j >= (n - 1 - i):
             estado = False 
