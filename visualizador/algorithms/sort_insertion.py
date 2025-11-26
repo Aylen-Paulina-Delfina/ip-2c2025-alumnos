@@ -14,18 +14,17 @@ def init(vals):
 
 def step():
     global items, n, i, j
-    if i >= n:
+    if i>=n:
         return {"done": True}
     if j is None:
-        j = i 
-        return {"a": j, "b": j, "swap": False, "done": False}
-    if j > 0 and items[j - 1] > items[j]:
-        a = j - 1
-        b = j
+        j=i  
+        return{"a": j, "b": j, "swap": False, "done": False}
+    if j>0 and items[j-1]>items[j]:
+        a= j-1
+        b= j
         items[a], items[b] = items[b], items[a]
-        j -= 1
+        j-= 1
         return {"a": a, "b": b, "swap": True, "done": False}
-        i += 1
-        j = None
-        return {"a": i - 1, "b": i - 1, "swap": False, "done": False}
-    return {"done": True}
+    i+=1
+    j=None
+    return {"a": i - 1, "b": i - 1, "swap": False, "done": False}
